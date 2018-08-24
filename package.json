@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "uglifyjs typekit-cache.js -o typekit-cache.min.js --compress --mangle"
+    "prepare": "uglifyjs typekit-cache.js -o typekit-cache.min.js --compress --mangle"
   },
   "repository": {
     "type": "git",
