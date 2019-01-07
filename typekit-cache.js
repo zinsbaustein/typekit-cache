@@ -23,6 +23,12 @@
     temp[ innerHTML ] = storage[ key ];
     document[ getElementsByTagName ]( 'head' )[ 0 ].appendChild( temp );
     document.documentElement.className += ' wf-cached';
+
+    if ( typeof performance !== "undefined" && performance !== null ) {
+      if ( typeof performance.mark === "function" ) {
+        performance.mark( 'wf-cached' );
+      }
+    }
   }
 
   // Find and cache the Typekit CSS.
